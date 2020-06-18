@@ -20,6 +20,12 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  let sum= 0 ;
+  for (let i=0; i< numbers.length; i++) {
+  if (numbers[i] % 2 !== 0) 
+    sum = numbers[i]+ sum;
+  }
+ return sum;
 }
 
 /**
@@ -36,8 +42,14 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  let count=0;
+  string=string.toLowerCase();
+  for (let i=0;i< string.length; i++) {
+    if (string[i]==c) 
+    count++
+  }
+return count++
 }
-
 /**
  * differences(numbers):
  * - receives an array of numbers
@@ -55,8 +67,15 @@ function characterCount(string, c) {
  */
 function differences(numbers) {
   // Your code here
+  let result=[];
+  let difference=0;
+    for (let i=0;i< numbers.length-1; i++) {
+    difference = numbers[i+1]- numbers[i];
+    result.push(difference);
 }
-
+return (result)
+}
+console.log (differences([1,4,3]))
 /**
  * largestIncrement(numbers):
  * - receives an array of numbers
@@ -75,6 +94,7 @@ function differences(numbers) {
  */
 function largestIncrement(numbers) {
   // Your code here
+
 }
 
 /**
@@ -105,7 +125,13 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
-}
+  let initials;
+  for (let i=0; i<firstName,lastName.length; i++){
+  
+ initials= }}
+  
+
+
 
 /**
  * isUpperCase(string):
@@ -119,8 +145,14 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
-}
+  for (let i=0; i< string; i++) {
+    if (string[i] !== string.toUpperCase()) 
+       return false;
+  }
+  return true;
 
+}
+console.log (isUpperCase("Zahraa"))
 /**
  * elementInArray(numbers, x):
  * - receives an array of numbers, and a number `x`.
@@ -133,7 +165,16 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
+  for (let i=0; i<numbers.length; i++) {
+    if(numbers[i]===x) {
+    return true;}
+     
+  }
+  return false;
 }
+console.log (elementInArray([1,2,4,2],2))
+
+
 
 /**
  * reverseString(string):
@@ -169,4 +210,4 @@ module.exports = {
   isUpperCase,
   elementInArray,
   reverseString,
-};
+}
