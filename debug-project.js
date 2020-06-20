@@ -8,14 +8,14 @@
  * generateIntegersArray(4, 9) -> [4, 5, 6, 7, 8, 9]
  *
  */
-// function generateIntegersArray(firstNumber, lastNumber) {
-//   let integersArray = [];
-//   while (firstNumber <= lastNumber){
-//     integersArray.push(firstNumber);
-//     firstNumber++;
-//   }
-//   return integersArray;
-// }
+function generateIntegersArray(firstNumber, lastNumber) {
+  let integersArray = [];
+  while (firstNumber <= lastNumber) {
+    integersArray.push(firstNumber);
+    firstNumber++;
+  }
+  return integersArray;
+}
 /**
  * noZeroes(numberString):
  * - receives a number as a string
@@ -28,20 +28,19 @@
  *
  */
 function noZeroes(numberString) {
-  while (numberString.startsWith("0")) {
-   numberString= numberString.slice(0, -1);}
-  
+  while (numberString.startsWith("0"))
+    // numberString = numberString.slice(1, numberString.length); another solution
+    numberString = numberString.slice(1);
 
-  while (numberString.endsWith("0")) {
-   numberString= numberString.slice(0,1);
-  }
+
+  while (numberString.endsWith("0")) numberString = numberString.slice( 0,-1);
+
   return numberString;
 }
-console.log(noZeroes("0230"))
 
 // console.log(generateIntegersArray(3, 7));
-// console.log(noZeroes("001100"));
+console.log(noZeroes("001100"));
 module.exports = {
-  // generateIntegersArray,
-  // noZeroes,
+  generateIntegersArray,
+  noZeroes,
 };
